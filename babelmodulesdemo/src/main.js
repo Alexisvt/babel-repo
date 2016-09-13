@@ -1,12 +1,7 @@
-let greeting = 'Hi';
-let sampleObj = {
-  foo: "Alexis",
-  bar() {
-    return 1;
-  }
-};
+import { operations } from './arithmetic.js';
 
-const newSampleObj = {...sampleObj };
+let result = operations.add(1, 1);
+console.log(result);
 
-console.log(`-- ${greeting} Alexis`);
-console.log(newSampleObj.foo);
+result = operations.subtract(3, 1);
+console.log(result);

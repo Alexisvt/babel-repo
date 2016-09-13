@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "babel-bundle-sourcemap": "babel src --presets es2015 -o build/bundle.js -s"
+    "babel-bundle-sourcemap": "babel src --presets es2015 -o build/bundle.js -s",
+    "babel-watch": "babel src --presets es2015 -o build/bundle.js -s -w"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,16 @@
+{
+  "name": "babelconfigurationsample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel-bundle": "babel src --presets es2015 -o build/bundle.js -s"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.14.0"
+  }
+}

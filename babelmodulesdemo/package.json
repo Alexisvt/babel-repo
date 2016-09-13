@@ -1,0 +1,19 @@
+{
+  "name": "babelmodulesdemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run babel-reading-configfile-preset",
+    "babel-bundle-sourcemap": "babel src --presets es2015 -o build/bundle.js -s",
+    "babel-watch": "babel src --presets es2015 -o build/bundle.js -s -w",
+    "babel-reading-configfile-preset": "babel src -o build/bundle.js -s -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-preset-es2015": "^6.14.0"
+  }
+}

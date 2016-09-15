@@ -30,7 +30,7 @@ export const getUsersAction: ActionCreator<IUserAction> = () => {
   };
 };
 
-
+// exporting all actions into a single object literal expression
 export default ({
   getUsersAction,
   updateUserAction,

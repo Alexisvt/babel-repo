@@ -1,12 +1,12 @@
-import { IUserState } from '../reducers/userReducer';
+import { IUserState } from '../reducers/states-interface';
 import { IUserAction } from './actions-intefaces';
 import { ActionCreator, ActionCreatorsMapObject } from 'redux';
 
 
-export const addUserAction: ActionCreator<IUserAction> = (userInfo: IUserState): IUserAction => {
+export const addUserAction: ActionCreator<IUserAction> = (newUserData: IUserState): IUserAction => {
   return {
     type: 'ADD_USER',
-    payload: userInfo
+    payload: newUserData
   };
 };
 

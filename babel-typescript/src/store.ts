@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
-import { userReducer as users, IUserState } from './reducers/userReducer';
+import { userReducer as users, IUserState } from './reducers';
 import * as logger from 'redux-logger';
 
 export interface IStoreState {

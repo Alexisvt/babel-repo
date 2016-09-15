@@ -4,7 +4,10 @@ import { connect } from 'react-redux';
 import { IStoreState } from '../store';
 import  actions from '../actions/user-actions';
 import { IUserAction } from '../actions/actions-intefaces';
-import { IUserState } from '../reducers/userReducer';
+import { IUserState } from '../reducers';
+import UserViewer from './userviewer-component';
+import { UserCreator } from './usercreator-component';
+
 // import { addUserAction, removeUserAction, updateUserAction } from '../actions/user-actions';
 
 interface IContainerProps {
@@ -29,13 +32,11 @@ class ContainerComponent extends React.Component<IContainerProps, void> {
   }
 
   render() {
-    let userList = this.props.users.
-      map((user: IUserState, index: number) => <li key={index}>{user.user}</li>);
 
     return (
       <div>
-        <h1>User List</h1>
-        <ul>{userList}</ul>
+        <UserCreator saveHandler={this.props.actionsprops.addUserAction}></UserCreator>
+        <UserViewer users={this.props.users}></UserViewer>
       </div>
     );
   }
@@ -58,6 +59,7 @@ export default connect(mapStateToProps, matDispatchToProps)(ContainerComponent);
     the bindActionCreators from redux, I will keep this here to have a reference how we can do it
     also pay attention to the interface for ContainerComponent props, the line commented is need to
      inform that the props is available to use inside the component as prop
+*/
 // const matDispatchToProps = (dispatch: Function) => {
 //   return {
 //     addUser: (user: IUserState) => dispatch(addUserAction(user))

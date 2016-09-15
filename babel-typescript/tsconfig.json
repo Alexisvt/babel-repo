@@ -5,6 +5,7 @@
         "noImplicitAny": true,
         "sourceMap": false,
         "jsx": "react",
-        "noEmitOnError": true
+        "noEmitOnError": false,
+        "removeComments": true
     }
 }

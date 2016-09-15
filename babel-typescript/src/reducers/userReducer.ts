@@ -1,20 +1,18 @@
 import { IUserAction } from '../actions/actions-intefaces';
-
-export interface IUserState {
-  user?: string;
-  age?: number;
-  email?: string;
-};
+import { IUserState } from './states-interface';
 
 const initialState: IUserState[] = [{
-  user: 'Alexis',
-  age: 35
+  userName: 'Alexis',
+  age: 35,
+  email: 'alexisvt@gmail.com'
 }];
 
 export function userReducer (state = initialState, action: IUserAction): IUserState[] {
   switch (action.type) {
     case 'GET_USER':
       return state;
+    case 'ADD_USER':
+      return [...state, action.payload];
     default:
       break;
   }

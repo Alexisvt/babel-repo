@@ -3,7 +3,7 @@ import * as webpack from 'webpack';
 
 const config: webpack.Configuration = {
   context: path.resolve('src'),
-  entry: './main',
+  entry: ['babel-polyfill', './main'],
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js'

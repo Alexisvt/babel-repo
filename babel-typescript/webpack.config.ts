@@ -11,7 +11,8 @@ const config: webpack.Configuration = {
   devServer: {
     contentBase: 'dist',
     port: 3000,
-    inline: true
+    inline: true,
+    open: true
   },
   resolve: {
     extensions: ['', '.js']

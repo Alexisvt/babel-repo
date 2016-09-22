@@ -3,8 +3,8 @@ import { IUserState } from './states-interface';
 
 const initialState: IUserState[] = [{
   userName: 'Alexis',
-  age: 35,
-  email: 'alexisvt@gmail.com'
+  age: 31,
+  email: 'sample@ugmail.com'
 }];
 
 export function userReducer (state = initialState, action: IUserAction): IUserState[] {
